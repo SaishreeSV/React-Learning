@@ -1,0 +1,6 @@
+
+1. Using cdn links in script tag -- react and reactdom (Not a preferred way)
+   Costly operation-- network call to unpkg.com
+   If versions change, cdn urls must be changed.
+	
+2. Using npm
