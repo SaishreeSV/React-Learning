@@ -15,3 +15,33 @@
 - can also host on HTTPS
 - Tree Shaking - remove unused code for me
 - Different build for dev
+
+# Food Ordering App
+
+/*
+1. Header
+ - Logo
+ - NavItems
+2. Body
+ - Searh
+ - RestaurantContainer
+   - RestaurantCard
+      - image
+      - name of restaurant, rating, cuisine, delivery time
+3. Footer
+ - Copyright
+ - Links
+ - Address
+*/
+
+Two types of Export and Import
+- Default
+
+export default Component/Variable;
+import Component/Variable from "path";
+
+-Named
+
+export const Component/Variable;
+import {Component/Variable} from "path";
+
