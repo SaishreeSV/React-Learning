@@ -45,3 +45,10 @@ import Component/Variable from "path";
 export const Component/Variable;
 import {Component/Variable} from "path";
 
+
+...
+# React Hooks
+ (these are normal JS utiility functions pre built by facebook developers)
+ - useState() - generate superpowerful react variables
+ - useEffect()
+
