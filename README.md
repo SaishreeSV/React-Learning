@@ -18,7 +18,6 @@
 
 # Food Ordering App
 
-/*
 1. Header
  - Logo
  - NavItems
@@ -32,17 +31,13 @@
  - Copyright
  - Links
  - Address
-*/
+
 
 Two types of Export and Import
-- Default
-
-export default Component/Variable;
+- Default: export default Component/Variable;
 import Component/Variable from "path";
 
--Named
-
-export const Component/Variable;
+- Named: export const Component/Variable;
 import {Component/Variable} from "path";
 
 
