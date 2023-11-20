@@ -4,3 +4,5 @@
    If versions change, cdn urls must be changed.
 	
 2. Using npm
+
+1hr32min episode 6

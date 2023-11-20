@@ -45,5 +45,6 @@ import {Component/Variable} from "path";
 # React Hooks
  (these are normal JS utiility functions pre built by facebook developers)
  - useState() - generate superpowerful react variables
+  (whenever state variables udates react triggers a reconciliation cycle i.e, re renders the component)
  - useEffect()
 
