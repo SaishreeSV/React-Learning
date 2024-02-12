@@ -7,7 +7,6 @@ const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
-
   const [searchText, setSearchText] = useState("");
   useEffect(() => {
     fetchData();
@@ -21,15 +20,18 @@ const Body = () => {
     const json = await data.json();
     console.log(json);
     //Optional chaining
-    setFilteredRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setFilteredRestaurants(//initialize at first time
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
     setListOfRestaurants(
-      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
+  console.log(listOfRestaurants);
   // conditional rendering: rendering based on any condition
   // ternary operator
-  return listOfRestaurants.length === 0 ? (
+  return listOfRestaurants?.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
@@ -47,8 +49,8 @@ const Body = () => {
             onClick={() => {
               //filter cards and update
               //takes a callback function and iterates over the array
-              const filtered = listOfRestaurants.filter(
-                (res) => res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              const filtered = listOfRestaurants.filter((res) =>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
               setFilteredRestaurants(filtered);
               console.log(searchText);
